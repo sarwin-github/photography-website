@@ -1,4 +1,93 @@
-<section class="section overflow-hidden" id="section-gallery">
+<style type="text/css">
+    /* Style the Image Used to Trigger the Modal */
+    .imageGallery {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .imageGallery:hover {opacity: 0.7;}
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    /* Modal Content (Image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation - Zoom in the Modal */
+    .modal-content, #caption { 
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+    }
+
+    /* The Close Button */
+    .close {
+        position: relative;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+        .modal-content {
+            width: 100%;
+        }
+    }
+</style>
+
+<section class="section overflow-hidden" id="section-gallery" style="border-bottom: 5px solid #9b3f2d;">
+    <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 offset-lg-2">
@@ -7,13 +96,12 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="galleryImages">
             <div class="col-md-3 box text-center py-20">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
-                        <a href="#">
-                            <img src="/public/images/PhotoG.jpg" class="img-fluid" style="width: 450px; border: 1px solid #e2e2e2">
-                        </a>
+                        <img src="/public/images/PhotoG.jpg" id="myImg"
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
                     </div>
                 </div>
             </div>
@@ -21,9 +109,8 @@
             <div class="col-md-3 box text-center py-20">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
-                        <a href="#">
-                            <img src="/public/images/PhotoG2.jpg" class="img-fluid" style="width: 450px; border: 1px solid #e2e2e2">
-                        </a>
+                        <img src="/public/images/PhotoG2.jpg" id="myImg2"
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
                     </div>
                 </div>
             </div>
@@ -31,9 +118,8 @@
             <div class="col-md-3 box text-center py-20">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
-                        <a href="#">
-                            <img src="/public/images/PhotoG3.jpg" class="img-fluid" style="width: 450px; border: 1px solid #e2e2e2">
-                        </a>
+                        <img src="/public/images/PhotoG3.jpg" id="myImg3"
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
                     </div>
                 </div>
             </div>
@@ -41,9 +127,8 @@
             <div class="col-md-3 box text-center py-20">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
-                        <a href="#">
-                            <img src="/public/images/PhotoG4.jpg" class="img-fluid" style="width: 450px; border: 1px solid #e2e2e2">
-                        </a>
+                        <img src="/public/images/PhotoG4.jpg" id="myImg4"
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
                     </div>
                 </div>
             </div>
@@ -51,9 +136,8 @@
             <div class="col-md-3 box text-center py-20">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
-                        <a href="#">
-                            <img src="/public/images/PhotoG5.jpg" class="img-fluid" style="width: 450px; border: 1px solid #e2e2e2">
-                        </a>
+                        <img src="/public/images/PhotoG5.jpg" id="myImg5"
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
                     </div>
                 </div>
             </div>
@@ -61,9 +145,8 @@
             <div class="col-md-3 box text-center py-20">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
-                        <a href="#">
-                            <img src="/public/images/PhotoG6.jpg" class="img-fluid" style="width: 450px; border: 1px solid #e2e2e2">
-                        </a>
+                        <img src="/public/images/PhotoG6.jpg" id="myImg6"
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
                     </div>
                 </div>
             </div>
@@ -71,10 +154,8 @@
             <div class="col-md-3 box text-center py-20">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
-                        <a href="#">
-                            <img src="/public/images/PhotoG7.jpg" class="img-fluid" style="width: 450px; border: 1px solid #e2e2e2">
-                            
-                        </a>
+                        <img src="/public/images/PhotoG7.jpg" id="myImg7"
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
                     </div>
                 </div>
             </div>
@@ -82,12 +163,47 @@
             <div class="col-md-3 box text-center py-20">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
-                        <a href="#">
-                            <img src="/public/images/PhotoG8.jpg" class="img-fluid" style="width: 450px; border: 1px solid #e2e2e2">
-                        </a>
+                        <img src="/public/images/PhotoG8.jpg" id="myImg8"
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8').mouseover(function() {
+            var modal = document.getElementById('myModal');
+            var img = document.getElementById(this.id);;
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+                console.log(this.id)
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        });
+
+        $('#myModal').on('hidden.bs.modal', function () {
+          $("body").removeClass("disable-scroll");
+          $("body").addClass("enable-scroll");
+        });
+
+        $('#myModal').on('show.bs.modal', function () {
+          $("body").removeClass("enable-scroll");
+          $("body").addClass("disable-scroll");
+        });
+    });
+</script>
