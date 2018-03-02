@@ -22,7 +22,7 @@ module.exports.pickEnv = (env, app) => {
 
 module.exports.initializeVariable = (req, res, next) => {
   	res.locals.session = req.session;
-  	res.locals.title   = "ZASPix: Creative Photography Blog";
+  	res.locals.title   = "ZASPIX: Creative Photography Blog";
 	res.locals.node_environment   = process.env.NODE_EN;
 
 	next();
