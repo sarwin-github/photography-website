@@ -9,7 +9,7 @@
     .imageGallery:hover {opacity: 0.7;}
 
     /* The Modal (background) */
-    .modal {
+    .modal-gallery {
         display: none; /* Hidden by default */
         z-index: 1; /* Sit on top */
         padding-top: 100px; /* Location of the box */
@@ -23,7 +23,7 @@
     }
 
     /* Modal Content (Image) */
-    .modal-content {
+    .modal-gallery-content {
         margin: auto;
         display: block;
         width: 80%;
@@ -43,7 +43,7 @@
     }
 
     /* Add Animation - Zoom in the Modal */
-    .modal-content, #caption { 
+    .modal-gallery-content, #caption { 
         animation-name: zoom;
         animation-duration: 0.6s;
     }
@@ -79,13 +79,13 @@
 </style>
 
 <section class="section overflow-hidden" id="section-gallery">
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal modal-gallery">
 
       <!-- The Close Button -->
-      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <button type="button" class="close" data-dismiss="modal-gallery">&times;</button>
 
       <!-- Modal Content (The Image) -->
-      <img class="modal-content" id="img01">
+      <img class="modal-gallery-content modal-content" id="img01">
     </div>
 
     <div class="container">
@@ -177,14 +177,12 @@
     $(document).ready(function(){
         $('#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8').mouseover(function() {
             var modal = document.getElementById('myModal');
-            var img = document.getElementById(this.id);;
+            var img = document.getElementById(this.id);
             var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
 
             img.onclick = function(){
                 modal.style.display = "block";
                 modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
                 console.log(this.id)
             }
 

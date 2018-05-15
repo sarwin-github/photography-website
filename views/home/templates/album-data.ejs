@@ -1,6 +1,128 @@
+<style type="text/css" media="screen">
+    .thumbnail {
+      padding: 0;
+      width: 75px;
+      min-height: 60px;
+    }
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      line-height: 1;
+      width: 100%;
+    }
+    .carousel-item.active, .carousel-item-next, .carousel-item-prev {
+      display: block;
+    }
+    .carousel-indicators-round li {
+      border-radius: 10px;
+      margin: 1px 3px;
+      border: 1px solid #fff;
+      background-color: transparent;
+    }
+    .carousel-indicators .active {
+      background-color: #fff;
+    }
+    #festivityCarousel {
+      margin: 20px auto;
+    }
+    #festivityCarousel .carousel-indicators {
+      margin: 10px 0 0;
+      overflow: auto;
+      position: static;
+      text-align: left;
+      white-space: nowrap;
+      width: 100%;
+    }
+    #festivityCarousel .carousel-indicators li {
+      background-color: transparent;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      display: inline-block;
+      height: auto;
+      margin: 1 !important;
+      width: auto;
+    }
+    #festivityCarousel .carousel-indicators li > img {
+      display: block;
+      max-height: 30px;
+      height: 30px;
+      overflow-y: hidden !important;
+      margin: 2px;
+      opacity: 0.6;
+    }
+
+    #festivityCarousel .carousel-indicators li > img:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+    #festivityCarousel .carousel-outer {
+      position: relative;
+    }
+
+
+    #creativeCarousel {
+      margin: 20px auto;
+    }
+    #creativeCarousel .carousel-indicators {
+      margin: 10px 0 0;
+      overflow: auto;
+      position: static;
+      text-align: left;
+      white-space: nowrap;
+      width: 100%;
+    }
+    #creativeCarousel .carousel-indicators li {
+      background-color: transparent;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      display: inline-block;
+      height: auto;
+      margin: 1 !important;
+      width: auto;
+    }
+    #creativeCarousel .carousel-indicators li > img {
+      display: block;
+      max-height: 30px;
+      height: 30px;
+      overflow-y: hidden !important;
+      margin: 2px;
+      opacity: 0.6;
+    }
+
+    #creativeCarousel .carousel-indicators li > img:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+    #creativeCarousel .carousel-outer {
+      position: relative;
+    }
+
+</style>
+
 <section>
     <div class="container py-100">
         <div class="row">
+            <!-- MODAL POP UP FOR FESTIVITIES ALBUM -->
+            <%- include("./festivity-modal.ejs") %>
+
+            <!-- MODAL POP UP FOR FESTIVITIES ALBUM -->
+            <%- include("./creative-photography-modal.ejs") %>
+
+            <!-- MODAL POP UP FOR FESTIVITIES ALBUM -->
+            <div class="modal" id="natureModal" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h6 class="modal-title">Nature: Capturing the art of nature.</h6>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
             <div class="col-12 col-md-8 offset-lg-2">
                 <h2 class="text-center text-uppercase">MY ALBUMS 
                 <h5 class="text-center" style="color:#4f4f4f;">Check out my album and explore more of my works. </h5><br>
@@ -10,10 +132,10 @@
                 <div class="card card-bordered card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
                         <img src="/public/images/Album2.jpg" id=" myAlbum"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2" data-toggle="modal" data-target="#festivitiesModal">
                     </div>
                     <h5>Festivities</h5>
-                    <p class="px-10">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                    <p class="px-10">Captured moment in festivals around Quezon province.</p>
                 </div>
             </div>
 
@@ -21,10 +143,10 @@
                 <div class="card card-bordered card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
                         <img src="/public/images/Album.jpg" id=" myAlbum2"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2" data-toggle="modal" data-target="#creativePhotographyModal">
                     </div>
                     <h5>Creative Photography</h5>
-                    <p class="px-10">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                    <p class="px-10">Black and white and stolen moments.</p>
                 </div>
             </div>
 
@@ -32,12 +154,13 @@
                 <div class="card card-bordered card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
                     <div class="card-block">
                         <img src="/public/images/Album3.jpg" id=" myAlbum3"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2" data-toggle="modal" data-target="#natureModal">
                     </div>
                     <h5>Nature</h5>
-                    <p class="px-10">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                    <p class="px-10">Capturing the art of nature.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
