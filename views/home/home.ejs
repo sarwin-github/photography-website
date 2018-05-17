@@ -21,9 +21,20 @@
         body.enable-scroll {
           overflow-y: scroll;
         }
+
+        .bg-img{
+            position:relative;
+            margin:0 auto;
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+            height:auto !important;
+            width:100%;
+            min-height:100%;
+            padding-top: 0 !important;
+        }
     </style>
 </head>
-<body>
+<body class="bg-img" style="background-image: url(public/images/Gallery2.jpg);">
 <div class="container-fluid" style="padding:0px;">
 	<!-- THIS IS THE BANNER -->
 	<%- include("templates/header.ejs") %>
@@ -36,10 +47,10 @@
 	<%- include("templates/about-us.ejs") %>
     <!-- // END OF ABOUT US SECTION -->
 
-    <section class="section section-inverse" style="background-image: url(public/images/Gallery4.jpg); border-bottom: 5px solid #212121;" data-overlay="6">
+    <section class="section" style="background: rgba(0,0,0, 0.6)">
         <div class="container">
             <div class="col-12 col-md-12 text-center">
-                <h4 class="mb-0">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
+                <h4 class="mb-0 text-white">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
                 <button class="btn btn-default">
                     <a href="#" data-scrollto="section-more-about" class="text-gray-dark">
                         CHECK ME OUT <span class="fa fa-arrow-down"></span>
@@ -53,7 +64,7 @@
     <%- include("templates/about-me.ejs") %>
     <!-- // END OF ABOUT US SECTION -->
 
-    <section class="section section-inverse" style="background-image: url(public/images/Gallery2.jpg); border-bottom: 5px solid #212121;" data-overlay="6">
+    <section class="section section-inverse" style="background-image: url(public/images/Gallery4.jpg); border-bottom: 5px solid #212121;" data-overlay="6">
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">EXPLORE MY WORKS HERE!</h4><hr width="50px;">
@@ -71,7 +82,7 @@
     <!-- // END OF OUR TESTIMONIALS SECTION -->
 
 
-    <section class="section section-inverse" style="background-image: url(public/images/Gallery.jpg); border-bottom: 5px solid #212121;" data-overlay="6">
+    <section class="section section-inverse" style="background-image: url(public/images/Album2.jpg); border-bottom: 5px solid #212121;" data-overlay="6">
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">DO YOU WANT TO CREATE A RESERVATION?</h4><hr width="50px;">
@@ -88,8 +99,10 @@
     <!-- THIS IS THE CONTACT US SECTION -->
     <%- include("templates/contact-me.ejs") %>
     <!-- // END OF THE CONTACT US SECTION -->
+
+    <%- include("../templates/footer.ejs") %>
 </div>
-<%- include("../templates/footer.ejs") %>
+
 <script src="/public/javascript/core.min.js"></script>
 <script src="/public/javascript/thesaas.min.js"></script>
 </body>
