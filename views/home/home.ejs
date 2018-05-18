@@ -47,11 +47,24 @@
 	<%- include("templates/about-us.ejs") %>
     <!-- // END OF ABOUT US SECTION -->
 
-    <section class="section" style="background: rgba(0,0,0, 0.6)">
+    <section class="section section-inverse hidden-sm-down" style="background: rgba(0,0,0, 0.6)">
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0 text-white">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
                 <button class="btn btn-default">
+                    <a href="#" data-scrollto="section-more-about" class="text-gray-dark">
+                        CHECK ME OUT <span class="fa fa-arrow-down"></span>
+                    </a>
+                </button> 
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-inverse hidden-sm-up" style="background-image: url(public/images/Gallery2.jpg);" data-overlay="6">
+        <div class="container">
+            <div class="col-12 col-md-12 text-center">
+                <h4 class="mb-0 text-white">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
+                <button class="btn btn-default btn-block">
                     <a href="#" data-scrollto="section-more-about" class="text-gray-dark">
                         CHECK ME OUT <span class="fa fa-arrow-down"></span>
                     </a>
@@ -82,11 +95,23 @@
     <!-- // END OF OUR TESTIMONIALS SECTION -->
 
 
-    <section class="section section-inverse bg-img" style="background-image: url(public/images/Gallery6.jpg); border-bottom: 5px solid #212121;" data-overlay="5">
+    <section class="section section-inverse bg-img hidden-sm-down" style="background-image: url(public/images/Gallery6.jpg); border-bottom: 5px solid #212121;" data-overlay="5">
         <div class="container  pt-80">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">DO YOU WANT TO CREATE A RESERVATION?</h4><hr width="50px;">
                 <button class="btn btn-default">
+                    <a href="#" data-scrollto="section-contactus" class="text-gray-dark"> Send me a mail 
+                    <span class="fa fa-arrow-down"></a>
+                </button> 
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-inverse hidden-sm-up" style="background-image: url(public/images/Gallery6.jpg); border-bottom: 5px solid #212121;" data-overlay="6">
+        <div class="container  pt-80">
+            <div class="col-12 col-md-12 text-center">
+                <h4 class="mb-0">DO YOU WANT TO CREATE A RESERVATION?</h4><hr width="50px;">
+                <button class="btn btn-default btn-block">
                     <a href="#" data-scrollto="section-contactus" class="text-gray-dark"> Send me a mail 
                     <span class="fa fa-arrow-down"></a>
                 </button> 
