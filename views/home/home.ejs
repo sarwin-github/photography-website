@@ -4,11 +4,13 @@
     <title><%= locals.title %></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Company Web Solutions">
-    <meta name="keywords" content="Company Web Solutions">
+    <meta name="description" content="Photography Website">
+    <meta name="keywords" content="Photography Website">
+
     <link href="/public/css/core.min.css" rel="stylesheet">
     <link href="/public/css/thesaas.min.css" rel="stylesheet">
     <link href="/public/css/styles.css" rel="stylesheet">
+
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
@@ -32,6 +34,25 @@
             min-height:100%;
             padding-top: 0 !important;
         }
+
+        .btn-glass{
+            background-color: white !important; 
+            border: 1px solid whitesmoke !important; 
+            color: #a55757 !important;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+         
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        }
+         
+        ::-webkit-scrollbar-thumb {
+            background: #4B515D;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+        }
     </style>
 </head>
 <body class="bg-img" style="background-image: url(public/images/Gallery2.jpg);">
@@ -51,11 +72,9 @@
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0 text-white">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
-                <button class="btn btn-default">
-                    <a href="#" data-scrollto="section-more-about" class="text-gray-dark">
-                        CHECK ME OUT <span class="fa fa-arrow-down"></span>
-                    </a>
-                </button> 
+                <a href="#" data-scrollto="section-more-about" class="btn btn-glass">
+                    CHECK ME OUT
+                </a>
             </div>
         </div>
     </section>
@@ -64,11 +83,9 @@
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0 text-white">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
-                <button class="btn btn-default btn-block">
-                    <a href="#" data-scrollto="section-more-about" class="text-gray-dark">
-                        CHECK ME OUT <span class="fa fa-arrow-down"></span>
-                    </a>
-                </button> 
+                <a href="#" data-scrollto="section-more-about" class="btn btn-glass btn-block">
+                    CHECK ME OUT
+                </a> 
             </div>
         </div>
     </section>
@@ -81,11 +98,9 @@
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">EXPLORE MY WORKS HERE!</h4><hr width="50px;">
-                <button class="btn btn-default">
-                    <a href="#" data-scrollto="section-gallery" class="text-gray-dark">
-                        View Gallery <span class="fa fa-arrow-down"></span>
+                    <a href="#" data-scrollto="section-gallery" class="btn btn-glass">
+                        View Gallery 
                     </a>
-                </button> 
             </div>
         </div>
     </section>
@@ -99,10 +114,9 @@
         <div class="container  pt-80">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">DO YOU WANT TO CREATE A RESERVATION?</h4><hr width="50px;">
-                <button class="btn btn-default">
-                    <a href="#" data-scrollto="section-contactus" class="text-gray-dark"> Send me a mail 
-                    <span class="fa fa-arrow-down"></a>
-                </button> 
+                <a href="#" data-scrollto="section-contactus" class="btn btn-glass"> Send me a mail 
+                    <span class="fa fa-arrow-down">
+                </a>
             </div>
         </div>
     </section>
@@ -111,10 +125,7 @@
         <div class="container  pt-80">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">DO YOU WANT TO CREATE A RESERVATION?</h4><hr width="50px;">
-                <button class="btn btn-default btn-block">
-                    <a href="#" data-scrollto="section-contactus" class="text-gray-dark"> Send me a mail 
-                    <span class="fa fa-arrow-down"></a>
-                </button> 
+                <a href="#" data-scrollto="section-contactus" class="btn btn-glass btn-block"> Send me a mail <span class="fa fa-arrow-down"></a>
             </div>
         </div>
     </section>
