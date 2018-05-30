@@ -1,7 +1,7 @@
 {
-  "name": "jy-websolutions",
+  "name": "zaspix",
   "version": "1.0.0",
-  "description": "JY-Web Solutions Website",
+  "description": "Zesch Anne Sales Photography Blog",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sarwin-github/company-web-solutions"
+    "url": "git+https://github.com/sarwin-github/photography-website"
   },
   "engines": {
     "node": "6.10.2"
