@@ -76,6 +76,27 @@
             width: 100%;
         }
     }
+
+    .item {
+      position: relative;
+      overflow: hidden;
+    }
+    .item img {
+      max-width: 100%;
+      -moz-transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+    .item:hover img {
+      cursor: pointer;
+      -moz-transform: scale(1.4);
+      -webkit-transform: scale(1.4);
+      transform: scale(1.4);
+      z-index: 0;
+      position: relative;
+    }
+
+
 </style>
 
 <section class="section overflow-hidden" id="section-gallery">
@@ -99,72 +120,72 @@
         <div class="row" id="galleryImages">
             <div class="col-md-3 box text-center">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
-                    <div class="card-block">
+                    <div class="card-block item">
                         <img src="/public/images/PhotoG.jpg" id="myImg"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px;">
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 box text-center">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
-                    <div class="card-block">
+                    <div class="card-block item">
                         <img src="/public/images/PhotoG2.jpg" id="myImg2"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px;">
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 box text-center">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
-                    <div class="card-block">
+                    <div class="card-block item">
                         <img src="/public/images/PhotoG3.jpg" id="myImg3"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px;">
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 box text-center">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
-                    <div class="card-block">
+                    <div class="card-block item">
                         <img src="/public/images/PhotoG4.jpg" id="myImg4"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px;">
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 box text-center">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
-                    <div class="card-block">
+                    <div class="card-block item">
                         <img src="/public/images/PhotoG5.jpg" id="myImg5"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px;">
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 box text-center">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
-                    <div class="card-block">
+                    <div class="card-block item">
                         <img src="/public/images/PhotoG6.jpg" id="myImg6"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px;">
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 box text-center">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
-                    <div class="card-block">
+                    <div class="card-block item">
                         <img src="/public/images/PhotoG7.jpg" id="myImg7"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px;">
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 box text-center">
                 <div class="card card-hover-shadow" style="background-color: rgba(255, 255,255, 0);">
-                    <div class="card-block">
+                    <div class="card-block item">
                         <img src="/public/images/PhotoG8.jpg" id="myImg8"
-                        class="img-fluid imageGallery" style="width: 450px; border: 1px solid #e2e2e2">
+                        class="img-fluid imageGallery" style="width: 450px;">
                     </div>
                 </div>
             </div>

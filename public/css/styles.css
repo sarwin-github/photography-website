@@ -85,3 +85,9 @@ body{
 @media only screen and (max-width:480px){
 
 }
+
+.btn-hover-all:hover{
+	background: rgba(96,96,96,0.8) !important;
+	border: 1px solid whitesmoke !important; 
+	color: whitesmoke !important;
+}

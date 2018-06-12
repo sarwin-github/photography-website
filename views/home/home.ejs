@@ -55,7 +55,7 @@
         }
     </style>
 </head>
-<body class="bg-img" style="background-image: url(public/images/Gallery2.jpg);">
+<body>
 <div class="container-fluid" style="padding:0px;">
 	<!-- THIS IS THE BANNER -->
 	<%- include("templates/header.ejs") %>
@@ -68,11 +68,11 @@
 	<%- include("templates/about-us.ejs") %>
     <!-- // END OF ABOUT US SECTION -->
 
-    <section class="section section-inverse hidden-sm-down" style="background: rgba(0,0,0, 0.6)">
+    <section class="section section-inverse bg-img hidden-sm-down" style="background-image: url(public/images/Gallery2.jpg); border-bottom: 5px solid #212121;" data-overlay="5">
         <div class="container">
-            <div class="col-12 col-md-12 text-center">
+            <div class="col-12 col-md-12 text-center pt-80">
                 <h4 class="mb-0 text-white">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
-                <a href="#" data-scrollto="section-more-about" class="btn btn-glass">
+                <a href="#" data-scrollto="section-more-about" class="btn btn-glass btn-hover-all">
                     CHECK ME OUT
                 </a>
             </div>
@@ -98,7 +98,7 @@
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">EXPLORE MY WORKS HERE!</h4><hr width="50px;">
-                    <a href="#" data-scrollto="section-gallery" class="btn btn-glass">
+                    <a href="#" data-scrollto="section-gallery" class="btn btn-glass btn-hover-all">
                         View Gallery 
                     </a>
             </div>
@@ -114,7 +114,7 @@
         <div class="container  pt-80">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">DO YOU WANT TO CREATE A RESERVATION?</h4><hr width="50px;">
-                <a href="#" data-scrollto="section-contactus" class="btn btn-glass"> Send me a mail 
+                <a href="#" data-scrollto="section-contactus" class="btn btn-glass btn-hover-all"> Send me a mail 
                     <span class="fa fa-arrow-down">
                 </a>
             </div>

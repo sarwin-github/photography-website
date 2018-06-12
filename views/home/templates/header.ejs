@@ -1,6 +1,72 @@
 
+<style type="text/css">
+  .carousel-fade .carousel-item {
+   opacity: 0;
+   transition-duration: 0.75s;
+   transition-property: opacity;
+  }
 
-<!-- Header -->
+  .carousel-fade  .carousel-item.active,
+  .carousel-fade  .carousel-item-next.carousel-item-left,
+  .carousel-fade  .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+  }
+
+  .carousel-fade .active.carousel-item-left,
+  .carousel-fade  .active.carousel-item-right {
+   opacity: 0;
+  }
+
+  .carousel-fade  .carousel-item-next,
+  .carousel-fade .carousel-item-prev,
+  .carousel-fade .carousel-item.active,
+  .carousel-fade .active.carousel-item-left,
+  .carousel-fade  .active.carousel-item-prev {
+   transform: translateX(0);
+   transform: translate3d(0, 0, 0);
+  }
+</style>
+
+<div id="carouselHeaders" class="carousel carousel-fade slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <header class="header header-inverse" id="home" style="background-image: url(/public/images/Header.jpg); ">
+        <%- include("header-carousel.ejs") %>  
+      </header>
+    </div>
+
+    <div class="carousel-item">
+      <header class="header header-inverse" id="home" style="background-image: url(/public/images/Header3.jpg); ">
+        <%- include("header-carousel.ejs") %>  
+      </header>
+    </div>
+
+    <div class="carousel-item">
+      <header class="header header-inverse" id="home" style="background-image: url(/public/images/Header2.jpg); ">
+        <%- include("header-carousel.ejs") %>  
+      </header>
+    </div>
+
+    <div class="carousel-item">
+      <header class="header header-inverse" id="home" style="background-image: url(/public/images/Header4.jpg); ">
+        <%- include("header-carousel.ejs") %>  
+      </header>
+    </div>
+  </div>
+  <div class="hidden-sm-down">
+    <a class="carousel-control-prev" href="#carouselHeaders" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselHeaders" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+</div>
+
+<!-- Header 
 <header class="header header-inverse" id="home" style="background-image: url(/public/images/Header.jpg); ">
   <div class="overlay" style="background-color: #000; position: absolute; height: 100%; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.6;"></div>
   <div class="container text-center">
@@ -21,7 +87,7 @@
 
             <div class="col-12 col-md-12 text-center">
               <hr width="50px;"><br><br>
-              <a href="#" data-scrollto="section-album" class="btn btn-glass btn-lg py-10 mr-3">
+              <a href="#" data-scrollto="section-album" class="btn btn-glass btn-hover-all btn-lg py-10 mr-3">
                 BROWSE ALBUM
               </a> 
 
@@ -48,5 +114,5 @@
     </div>
 
   </div>
-</header>
+</header>-->
 <!-- END Header -->
