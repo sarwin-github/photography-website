@@ -10,11 +10,13 @@
     <link href="/public/css/core.min.css" rel="stylesheet">
     <link href="/public/css/thesaas.min.css" rel="stylesheet">
     <link href="/public/css/styles.css" rel="stylesheet">
-
+    <link href="/css/hover.css" rel="stylesheet">
+    <link href="/css/aos.css" rel="stylesheet">
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/aos.js"></script>
     <style type="text/css">
         body.disable-scroll {
           overflow-y: hidden;
@@ -29,6 +31,7 @@
             margin:0 auto;
             background-attachment: fixed; 
             background-repeat: no-repeat;
+            background-size: cover !important;
             height:auto !important;
             width:100%;
             min-height:100%;
@@ -72,7 +75,7 @@
         <div class="container">
             <div class="col-12 col-md-12 text-center pt-80">
                 <h4 class="mb-0 text-white">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
-                <a href="#" data-scrollto="section-more-about" class="btn btn-glass btn-hover-all">
+                <a href="#" data-scrollto="section-more-about" class="btn btn-glass btn-hover-all hvr-bounce-to-bottom">
                     CHECK ME OUT
                 </a>
             </div>
@@ -83,7 +86,7 @@
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0 text-white">WANT TO KNOW MORE ABOUT ME?</h4><hr width="50px;">
-                <a href="#" data-scrollto="section-more-about" class="btn btn-glass btn-block">
+                <a href="#" data-scrollto="section-more-about" class="btn btn-glass btn-hover-all hvr-bounce-to-bottom btn-block">
                     CHECK ME OUT
                 </a> 
             </div>
@@ -94,11 +97,22 @@
     <%- include("templates/about-me.ejs") %>
     <!-- // END OF ABOUT US SECTION -->
 
-    <section class="section section-inverse" style="background-image: url(public/images/Gallery4.jpg); " data-overlay="6">
+    <section class="section section-inverse hidden-sm-down" style="background-image: url(public/images/Gallery4.jpg); " data-overlay="6">
         <div class="container">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">EXPLORE MY WORKS HERE!</h4><hr width="50px;">
-                    <a href="#" data-scrollto="section-gallery" class="btn btn-glass btn-hover-all">
+                    <a href="#" data-scrollto="section-gallery" class="btn btn-glass btn-hover-all hvr-bounce-to-bottom">
+                        View Gallery 
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-inverse hidden-sm-up" style="background-image: url(public/images/Gallery4.jpg); " data-overlay="6">
+        <div class="container">
+            <div class="col-12 col-md-12 text-center">
+                <h4 class="mb-0">EXPLORE MY WORKS HERE!</h4><hr width="50px;">
+                    <a href="#" data-scrollto="section-gallery" class="btn btn-glass btn-hover-all hvr-bounce-to-bottom btn-block">
                         View Gallery 
                     </a>
             </div>
@@ -114,7 +128,7 @@
         <div class="container  pt-80">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">DO YOU WANT TO CREATE A RESERVATION?</h4><hr width="50px;">
-                <a href="#" data-scrollto="section-contactus" class="btn btn-glass btn-hover-all"> Send me a mail 
+                <a href="#" data-scrollto="section-contactus" class="btn btn-glass btn-hover-all hvr-bounce-to-bottom"> Send me a mail 
                     <span class="fa fa-arrow-down">
                 </a>
             </div>
@@ -125,7 +139,7 @@
         <div class="container  pt-80">
             <div class="col-12 col-md-12 text-center">
                 <h4 class="mb-0">DO YOU WANT TO CREATE A RESERVATION?</h4><hr width="50px;">
-                <a href="#" data-scrollto="section-contactus" class="btn btn-glass btn-block"> Send me a mail <span class="fa fa-arrow-down"></a>
+                <a href="#" data-scrollto="section-contactus" class="btn btn-glass btn-hover-all hvr-bounce-to-bottom btn-block"> Send me a mail <span class="fa fa-arrow-down"></a>
             </div>
         </div>
     </section>
@@ -141,5 +155,6 @@
 
 <script src="/public/javascript/core.min.js"></script>
 <script src="/public/javascript/thesaas.min.js"></script>
+
 </body>
 </html>

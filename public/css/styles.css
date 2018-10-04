@@ -87,7 +87,12 @@ body{
 }
 
 .btn-hover-all:hover{
-	background: rgba(96,96,96,0.8) !important;
 	border: 1px solid whitesmoke !important; 
 	color: whitesmoke !important;
 }
+
+.hvr-bounce-to-bottom:before{
+	background: #ffbb33 !important;
+
+}
+
