@@ -1,12 +1,12 @@
 <style type="text/css">
     /* Style the Image Used to Trigger the Modal */
-    .hvr-grow {
+     {
         padding: 0 !important;
         cursor: pointer !important;
 
     }
 
-    .hvr-grow:hover {cursor: pointer;}
+    :hover {cursor: pointer;}
 
 
 
@@ -98,10 +98,22 @@
       position: relative;
     }
 
+    .hvr-shutter-out-horizontal{
+        background: none !important;
+    }
+
+    .hvr-shutter-out-horizontal:before{
+        background: #263238 !important;
+        height: 3px !important;
+    }
+
+    .fa{
+        z-index: 999999;
+    }
 
 </style>
 
-<section class="section overflow-hidden" id="section-gallery">
+<section class="section overflow-hidden bg-gray" id="section-gallery">
     <div id="myModal" class="modal modal-gallery">
 
       <!-- The Close Button -->
@@ -111,7 +123,7 @@
       <img class="modal-gallery-content modal-content" id="img01">
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-12">
                 <h2 class="text-center text-uppercase">MY GALLERY 
@@ -121,84 +133,114 @@
 
         <div id="galleryImages">
             <section id="first-row" class="row m-0">
-                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="700">
-                    <div class="imageGallery hvr-grow">
-                        <div class="card-block">
+                <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="700">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal hvr-icon-bounce">
                             <img src="/public/images/PhotoG.jpg" id="myImg"
-                            class="img-fluid hvr-grow-rotate">
+                            class="img-fluid">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="800">
-                    <div class="imageGallery hvr-grow">
-                        <div class="card-block">
+                <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="800">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
                             <img src="/public/images/PhotoG2.jpg" id="myImg2"
-                            class="img-fluid hvr-grow-rotate">
+                            class="img-fluid">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="900">
-                    <div class="imageGallery hvr-grow">
-                        <div class="card-block">
+                <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="900">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
                             <img src="/public/images/PhotoG3.jpg" id="myImg3"
-                            class="img-fluid hvr-grow-rotate">
+                            class="img-fluid">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="imageGallery hvr-grow">
-                        <div class="card-block">
+                <div class="col-md-6 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
                             <img src="/public/images/PhotoG4.jpg" id="myImg4"
-                            class="img-fluid hvr-grow-rotate">
+                            class="img-fluid">
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="second-row"  class="row m-0">
-                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="900">
-                    <div class="imageGallery hvr-grow">
-                        <div class="card-block">
+                <div class="col-md-6 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="900">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
                             <img src="/public/images/PhotoG5.jpg" id="myImg5"
-                            class="img-fluid hvr-grow-rotate">
+                            class="img-fluid">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="imageGallery hvr-grow">
-                        <div class="card-block">
+                <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
                             <img src="/public/images/PhotoG6.jpg" id="myImg6"
-                            class="img-fluid hvr-grow-rotate">
+                            class="img-fluid">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1100">
-                    <div class="imageGallery hvr-grow">
-                        <div class="card-block">
+                <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1100">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
                             <img src="/public/images/PhotoG7.jpg" id="myImg7"
-                            class="img-fluid hvr-grow-rotate">
+                            class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                            <img src="/public/images/PhotoG8.jpg" id="myImg8"
+                            class="img-fluid">
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="imageGallery hvr-grow">
-                        <div class="card-block">
-                            <img src="/public/images/PhotoG8.jpg" id="myImg8"
-                            class="img-fluid hvr-grow-rotate">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                            <img src="/public/images/PhotoG10.jpg" id="myImg10"
+                            class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                            <img src="/public/images/PhotoG11.jpg" id="myImg11"
+                            class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1100">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                            <img src="/public/images/PhotoG12.jpg" id="myImg12"
+                            class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1100">
+                    <div class="imageGallery">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                            <img src="/public/images/PhotoG13.jpg" id="myImg13"
+                            class="img-fluid">
                         </div>
                     </div>
                 </div>
             </section>
-
-            
-
-
         </div> 
     </div>
 </section>
@@ -206,7 +248,7 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8').mouseover(function() {
+        $('#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #myImg13').mouseover(function() {
             var modal = document.getElementById('myModal');
             var img = document.getElementById(this.id);
             var modalImg = document.getElementById("img01");
