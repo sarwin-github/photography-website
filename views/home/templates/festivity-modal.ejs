@@ -1,67 +1,106 @@
 <style type="text/css">
-    #festivityCarousel {
-      margin: 20px auto;
-    }
-    #festivityCarousel .carousel-indicators {
-      margin: 10px 0 0;
-      overflow: auto;
-      position: static;
-      text-align: left;
-      white-space: nowrap;
-      width: 100%;
-    }
-    #festivityCarousel .carousel-indicators li {
-      background-color: transparent;
-      -webkit-border-radius: 0;
-      border-radius: 0;
-      display: inline-block;
-      height: auto;
-      margin: 1 !important;
-      width: auto;
-    }
-    #festivityCarousel .carousel-indicators li > img {
-      display: block;
-      max-height: 30px;
-      height: 30px;
-      overflow-y: hidden !important;
-      margin: 2px;
-      opacity: 0.6;
+    /* Useful Classes */
+    .xy-centerAlbumFestivity {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    #festivityCarousel .carousel-indicators li > img:hover {
-      opacity: 0.9;
-      cursor: pointer;
-    }
-    #festivityCarousel .carousel-outer {
-      position: relative;
+    .transition {
+        transition: all 350ms ease-in-out;
     }
 
-    /* Add Animation - Zoom in the Modal */
-    .modal { 
-        animation-name: zoom;
-        animation-duration: 0.6s;
+    .r-3-2 {
+        width: 100%;
+        padding-bottom: 66.667%;
+        background-color: #ddd;
     }
 
-    .close-modal {
+    .image-holder {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    /* Main Styles */
+    .galleryAlbumFestivity-wrapper {
         position: relative;
-        right: 10px !important;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
+        overflow: hidden;
     }
 
-
-    @media(max-width:767px){
-      .modal-small {
-        padding-top: 50px !important;
-      
-      }
+    .galleryAlbumFestivity {
+        position: relative;
+        white-space: nowrap;
+        font-size: 0;
     }
 
-    @keyframes zoom {
-        from {transform:scale(0)} 
-        to {transform:scale(1)}
+    .item-wrapper {
+        cursor: pointer;
+        width: 23%; /* arbitrary value */
+        display: inline-block;
+        background-color: white;
+    }
+
+    .galleryAlbumFestivity-item { opacity: 0.5; }
+    .galleryAlbumFestivity-item.active { opacity: 1; }
+
+    .controlsAlbumFestivity {
+        font-size: 0;
+        border-top: none;
+    }
+    .move-btnAlbumFestivity {
+        width: 50px;
+        border: none;
+        color: #ccc;
+        background-color: rgba(0,0,0,0.7);
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+        cursor: pointer !important;
+    }
+    .move-btnAlbumFestivity:first-child {border-right: none;}
+    .move-btnAlbumFestivity.left  { 
+        position: absolute;
+        top: 25%;
+        left: 0;
+        cursor: pointer;
+    }
+    .move-btnAlbumFestivity.right { 
+        position: absolute;
+        top: 25%;
+        right: 0;
+        cursor: pointer; 
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+        .move-btnAlbumFestivity {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            cursor: pointer !important;
+        }
+        .move-btnAlbumFestivity.left  { 
+            position: absolute;
+            top: 10% !important;
+            left: 0;
+            cursor: pointer;
+        }
+        .move-btnAlbumFestivity.right { 
+            position: absolute;
+            top: 10% !important;
+            right: 0;
+            cursor: pointer; 
+        }
+    }
+
+    @media only screen and (min-width: 765px){
+        .modal-lg {
+            max-width: 70% !important;
+        }
     }
 </style>
 
@@ -77,91 +116,45 @@
         <div class="modal-body">
             <h5 class="text-center hidden-sm-up">Captured moment in festivals around Quezon province.</h5>
 
-            <div id="festivityCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/0.jpg">
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/2.jpg">
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/4.jpg">
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/5.jpg">
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/6.jpg">
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/8.jpg">
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/7.jpg">
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/1.jpg">
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="d-block img img-fluid h-full w-full" src="/public/images/Festivities/3.jpg">
-                    </div>
+            <div class="feature">
+                <figure class="featuredAlbumFestivity-item image-holder r-3-2 transition"></figure>
+            </div>
+            
+            <div class="galleryAlbumFestivity-wrapper">
+                <div class="galleryAlbumFestivity">
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2 active transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="galleryAlbumFestivity-item image-holder r-3-2 transition"></figure>
+                        </div>
                 </div>
 
-                <ol class="carousel-indicators">
-                    <li data-target="#festivityCarousel" data-slide-to="0" class="active">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/0.jpg">
-                    </li>
-
-                    <li data-target="#festivityCarousel" data-slide-to="1">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/2.jpg">
-                    </li>
-
-                    <li data-target="#festivityCarousel" data-slide-to="2">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/4.jpg">
-                    </li>
-
-                    <li data-target="#festivityCarousel" data-slide-to="3">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/5.jpg">
-                    </li>
-
-                    <li data-target="#festivityCarousel" data-slide-to="4">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/6.jpg">
-                    </li>
-
-                    <li data-target="#festivityCarousel" data-slide-to="5">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/8.jpg">
-                    </li>
-
-                    <li data-target="#festivityCarousel" data-slide-to="6">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/7.jpg">
-                    </li>
-
-                    <li data-target="#festivityCarousel" data-slide-to="7">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/1.jpg">
-                    </li>
-
-                    <li data-target="#festivityCarousel" data-slide-to="8">
-                        <img class="d-block img-fluid" src="/public/images/Festivities/3.jpg">
-                    </li>
-                </ol>
-
-                <a class="carousel-control-prev" href="#festivityCarousel" role="button" data-slide="prev">
-                    <span class="fa fa-caret-left fs-40 fw-100" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#festivityCarousel" role="button" data-slide="next">
-                    <span class="fa fa-caret-right fs-40 fw-100" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="controlsAlbumFestivity">
+                    <button class="move-btnAlbumFestivity left btn btn-secondary fs-25">&larr;</button>
+                    <button class="move-btnAlbumFestivity right btn btn-secondary fs-25">&rarr;</button>
+                </div>
             </div>
             
         </div>
@@ -169,3 +162,123 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  var featuredAlbumFestivity = document.querySelector('.featuredAlbumFestivity-item');
+
+    $(document).ready(function(){
+       var images = [
+            '/public/images/Festivities/0.jpg',
+            '/public/images/Festivities/1.jpg',
+            '/public/images/Festivities/2.jpg',
+            '/public/images/Festivities/3.jpg',
+            '/public/images/Festivities/4.jpg',
+            '/public/images/Festivities/5.jpg',
+            '/public/images/Festivities/6.jpg',
+            '/public/images/Festivities/7.jpg',
+            '/public/images/Festivities/8.jpg',
+        ];
+
+
+        //Set Initial Featured Image
+        featuredAlbumFestivity.style.backgroundImage = 'url(' + images[0] + ')';
+        
+        //Set Images for Gallery and Add Event Listeners
+        for (var i = 0; i < galleryAlbumFestivityItems.length; i++) {
+            galleryAlbumFestivityItems[i].style.backgroundImage = 'url(' + images[i] + ')';
+            galleryAlbumFestivityItems[i].addEventListener('click', selectItemAlbumFestivity);
+        }
+   });
+
+    var galleryAlbumFestivity = document.querySelector('.galleryAlbumFestivity');
+    var galleryAlbumFestivityItems = document.querySelectorAll('.galleryAlbumFestivity-item');
+    var numOfItems = galleryAlbumFestivity.children.length;
+    var itemWidth = 23; // percent: as set in css
+
+    var leftBtn = document.querySelector('.move-btnAlbumFestivity.left');
+    var rightBtn = document.querySelector('.move-btnAlbumFestivity.right');
+    var leftInterval;
+    var rightInterval;
+
+    var scrollRate = 0.2;
+    var left;
+
+    function selectItemAlbumFestivity(e) {
+        if (e.target.classList.contains('active')) return;
+        
+        featuredAlbumFestivity.style.backgroundImage = e.target.style.backgroundImage;
+        
+        for (var i = 0; i < galleryAlbumFestivityItems.length; i++) {
+            if (galleryAlbumFestivityItems[i].classList.contains('active'))
+                galleryAlbumFestivityItems[i].classList.remove('active');
+        }
+        
+        e.target.classList.add('active');
+    }
+
+    function galleryAlbumFestivityWrapLeft() {
+        var first = galleryAlbumFestivity.children[0];
+        galleryAlbumFestivity.removeChild(first);
+        galleryAlbumFestivity.style.left = -itemWidth + '%';
+        galleryAlbumFestivity.appendChild(first);
+        galleryAlbumFestivity.style.left = '0%';
+    }
+
+    function galleryAlbumFestivityWrapRight() {
+        var last = galleryAlbumFestivity.children[galleryAlbumFestivity.children.length - 1];
+        galleryAlbumFestivity.removeChild(last);
+        galleryAlbumFestivity.insertBefore(last, galleryAlbumFestivity.children[0]);
+        galleryAlbumFestivity.style.left = '-23%';
+    }
+
+    function moveRightAlbumFestivity() {
+        left = left || 0;
+
+        leftInterval = setInterval(function() {
+            galleryAlbumFestivity.style.left = left + '%';
+
+            if (left > -itemWidth) {
+                left -= scrollRate;
+            } else {
+                left = 0;
+                galleryAlbumFestivityWrapLeft();
+            }
+        }, 1);
+    }
+
+    function moveLeft() {
+        //Make sure there is element to the leftd
+        if (left > -itemWidth && left < 0) {
+            left = left  - itemWidth;
+            
+            var last = galleryAlbumFestivity.children[galleryAlbumFestivity.children.length - 1];
+            galleryAlbumFestivity.removeChild(last);
+            galleryAlbumFestivity.style.left = left + '%';
+            galleryAlbumFestivity.insertBefore(last, galleryAlbumFestivity.children[0]);    
+        }
+        
+        left = left || 0;
+
+        leftInterval = setInterval(function() {
+            galleryAlbumFestivity.style.left = left + '%';
+
+            if (left < 0) {
+                left += scrollRate;
+            } else {
+                left = -itemWidth;
+                galleryAlbumFestivityWrapRight();
+            }
+        }, 1);
+    }
+
+    function stopMovement() {
+        clearInterval(leftInterval);
+        clearInterval(rightInterval);
+    }
+
+    leftBtn.addEventListener('mouseenter', moveLeft);
+    leftBtn.addEventListener('mouseleave', stopMovement);
+    rightBtn.addEventListener('mouseenter', moveRightAlbumFestivity);
+    rightBtn.addEventListener('mouseleave', stopMovement);
+    
+</script>
