@@ -50,27 +50,19 @@
         animation-duration: 0.6s;
     }
 
+    @media(max-width:767px){
+      .modal-small {
+        padding-top: 50px !important;
+      
+      }
+    }
+
     @keyframes zoom {
         from {transform:scale(0)} 
         to {transform:scale(1)}
     }
 
-    /* The Close Button */
-    .close {
-        position: relative;
-        right: 35px !important;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
 
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
 
     /* 100% Image Width on Smaller Screens */
     @media only screen and (max-width: 700px){
@@ -111,6 +103,110 @@
         z-index: 999999;
     }
 
+    /* Useful Classes */
+    .xy-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .transition {
+        transition: all 350ms ease-in-out;
+    }
+
+    .r-3-2 {
+        width: 100%;
+        padding-bottom: 66.667%;
+        background-color: #ddd;
+    }
+
+    .image-holder {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    /* Main Styles */
+    .gallery-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery {
+        position: relative;
+        white-space: nowrap;
+        font-size: 0;
+    }
+
+    .item-wrapper {
+        cursor: pointer;
+        width: 23%; /* arbitrary value */
+        display: inline-block;
+        background-color: white;
+    }
+
+    .gallery-item { opacity: 0.5; }
+    .gallery-item.active { opacity: 1; }
+
+    .controls {
+        font-size: 0;
+        border-top: none;
+    }
+    .move-btn {
+        width: 50px;
+        border: none;
+        color: #ccc;
+        background-color: rgba(0,0,0,0.7);
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+        cursor: pointer !important;
+    }
+    .move-btn:first-child {border-right: none;}
+    .move-btn.left  { 
+        position: absolute;
+        top: 25%;
+        left: 0;
+        cursor: pointer;
+    }
+    .move-btn.right { 
+        position: absolute;
+        top: 25%;
+        right: 0;
+        cursor: pointer; 
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+        .move-btn {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            cursor: pointer !important;
+        }
+        .move-btn.left  { 
+            position: absolute;
+            top: 10% !important;
+            left: 0;
+            cursor: pointer;
+        }
+        .move-btn.right { 
+            position: absolute;
+            top: 10% !important;
+            right: 0;
+            cursor: pointer; 
+        }
+    }
+
+    @media only screen and (min-width: 765px){
+        .modal-lg {
+            max-width: 70% !important;
+        }
+    }
+    
 </style>
 
 <section class="section overflow-hidden bg-gray" id="section-gallery">
@@ -123,7 +219,7 @@
       <img class="modal-gallery-content modal-content" id="img01">
     </div>
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-12">
                 <h2 class="text-center text-uppercase">MY GALLERY 
@@ -135,7 +231,7 @@
             <section id="first-row" class="row m-0">
                 <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="700">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal hvr-icon-bounce">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG.jpg" id="myImg"
                             class="img-fluid">
                         </div>
@@ -144,7 +240,7 @@
 
                 <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="800">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG2.jpg" id="myImg2"
                             class="img-fluid">
                         </div>
@@ -153,7 +249,7 @@
 
                 <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="900">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG3.jpg" id="myImg3"
                             class="img-fluid">
                         </div>
@@ -162,7 +258,7 @@
 
                 <div class="col-md-6 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG4.jpg" id="myImg4"
                             class="img-fluid">
                         </div>
@@ -171,7 +267,7 @@
 
                 <div class="col-md-6 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="900">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG5.jpg" id="myImg5"
                             class="img-fluid">
                         </div>
@@ -180,7 +276,7 @@
 
                 <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG6.jpg" id="myImg6"
                             class="img-fluid">
                         </div>
@@ -189,7 +285,7 @@
 
                 <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1100">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG7.jpg" id="myImg7"
                             class="img-fluid">
                         </div>
@@ -198,7 +294,7 @@
 
                 <div class="col-md-4 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1200">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG8.jpg" id="myImg8"
                             class="img-fluid">
                         </div>
@@ -207,7 +303,7 @@
 
                 <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1200">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG10.jpg" id="myImg10"
                             class="img-fluid">
                         </div>
@@ -216,7 +312,7 @@
 
                 <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG11.jpg" id="myImg11"
                             class="img-fluid">
                         </div>
@@ -225,7 +321,7 @@
 
                 <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1100">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG12.jpg" id="myImg12"
                             class="img-fluid">
                         </div>
@@ -234,7 +330,7 @@
 
                 <div class="col-md-3 pt-0 text-center p-0 m-0" data-aos="fade-up" data-aos-duration="1100">
                     <div class="imageGallery">
-                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal">
+                        <div class="card-block card-hover-shadow hvr-shutter-out-horizontal" data-toggle="modal" data-target="#galleryModal">
                             <img src="/public/images/PhotoG13.jpg" id="myImg13"
                             class="img-fluid">
                         </div>
@@ -245,37 +341,203 @@
     </div>
 </section>
 
+<!-- Gallery Modal -->
+<div class="modal fade modal-small" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="galleryModalLabel">Image Gallery</h5>
+        <button type="button" class="close" style="color:gray !important;" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="feature">
+                <figure class="featured-item image-holder r-3-2 transition"></figure>
+            </div>
+            
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 active transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                        <div class="item-wrapper">
+                            <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                        </div>
+                </div>
+
+                <div class="controls">
+                    <button class="move-btn left btn btn-secondary fs-25">&larr;</button>
+                    <button class="move-btn right btn btn-secondary fs-25">&rarr;</button>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script type="text/javascript">
+    var featured = document.querySelector('.featured-item');
+    var initImage;
     $(document).ready(function(){
-        $('#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #myImg13').mouseover(function() {
-            var modal = document.getElementById('myModal');
-            var img = document.getElementById(this.id);
-            var modalImg = document.getElementById("img01");
+       $('#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #myImg13').mouseover(function() {
+           var modal = document.getElementById('myModal');
+           var img = document.getElementById(this.id);
+           var modalImg = document.getElementById("img01");
+           img.onclick = function(){
+               initImage = document.getElementById(this.id).getAttribute('src');
+               var images = [
+                   '/public/images/PhotoG.jpg',
+                   '/public/images/PhotoG2.jpg',
+                   '/public/images/PhotoG3.jpg',
+                   '/public/images/PhotoG4.jpg',
+                   '/public/images/PhotoG5.jpg',
+                   '/public/images/PhotoG6.jpg',
+                   '/public/images/PhotoG7.jpg',
+                   '/public/images/PhotoG8.jpg',
+                   '/public/images/PhotoG10.jpg',
+                   '/public/images/PhotoG11.jpg',
+                   '/public/images/PhotoG12.jpg',
+                   '/public/images/PhotoG13.jpg',
+               ];
 
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                console.log(this.id)
+               var selectedImg = images.indexOf(initImage);
+               console.log(initImage);
+               //Set Initial Featured Image
+               featured.style.backgroundImage = 'url(' + initImage + ')';
+               
+               //Set Images for Gallery and Add Event Listeners
+               for (var i = 0; i < galleryItems.length; i++) {
+                   galleryItems[i].style.backgroundImage = 'url(' + images[i] + ')';
+                   galleryItems[i].addEventListener('click', selectItem);
+               }
+           }
+       });
+   });
+
+    var gallery = document.querySelector('.gallery');
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    var numOfItems = gallery.children.length;
+    var itemWidth = 23; // percent: as set in css
+
+    var leftBtn = document.querySelector('.move-btn.left');
+    var rightBtn = document.querySelector('.move-btn.right');
+    var leftInterval;
+    var rightInterval;
+
+    var scrollRate = 0.2;
+    var left;
+
+    function selectItem(e) {
+        if (e.target.classList.contains('active')) return;
+        
+        featured.style.backgroundImage = e.target.style.backgroundImage;
+        
+        for (var i = 0; i < galleryItems.length; i++) {
+            if (galleryItems[i].classList.contains('active'))
+                galleryItems[i].classList.remove('active');
+        }
+        
+        e.target.classList.add('active');
+    }
+
+    function galleryWrapLeft() {
+        var first = gallery.children[0];
+        gallery.removeChild(first);
+        gallery.style.left = -itemWidth + '%';
+        gallery.appendChild(first);
+        gallery.style.left = '0%';
+    }
+
+    function galleryWrapRight() {
+        var last = gallery.children[gallery.children.length - 1];
+        gallery.removeChild(last);
+        gallery.insertBefore(last, gallery.children[0]);
+        gallery.style.left = '-23%';
+    }
+
+    function moveRight() {
+        left = left || 0;
+
+        leftInterval = setInterval(function() {
+            gallery.style.left = left + '%';
+
+            if (left > -itemWidth) {
+                left -= scrollRate;
+            } else {
+                left = 0;
+                galleryWrapLeft();
             }
+        }, 1);
+    }
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+    function moveLeft() {
+        //Make sure there is element to the leftd
+        if (left > -itemWidth && left < 0) {
+            left = left  - itemWidth;
+            
+            var last = gallery.children[gallery.children.length - 1];
+            gallery.removeChild(last);
+            gallery.style.left = left + '%';
+            gallery.insertBefore(last, gallery.children[0]);    
+        }
+        
+        left = left || 0;
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() { 
-              modal.style.display = "none";
+        leftInterval = setInterval(function() {
+            gallery.style.left = left + '%';
+
+            if (left < 0) {
+                left += scrollRate;
+            } else {
+                left = -itemWidth;
+                galleryWrapRight();
             }
-        });
+        }, 1);
+    }
 
-        $('#myModal').on('hidden.bs.modal', function () {
-          $("body").removeClass("disable-scroll");
-          $("body").addClass("enable-scroll");
-        });
+    function stopMovement() {
+        clearInterval(leftInterval);
+        clearInterval(rightInterval);
+    }
 
-        $('#myModal').on('show.bs.modal', function () {
-          $("body").removeClass("enable-scroll");
-          $("body").addClass("disable-scroll");
-        });
-    });
+    leftBtn.addEventListener('mouseenter', moveLeft);
+    leftBtn.addEventListener('mouseleave', stopMovement);
+    rightBtn.addEventListener('mouseenter', moveRight);
+    rightBtn.addEventListener('mouseleave', stopMovement);
+    
 </script>
