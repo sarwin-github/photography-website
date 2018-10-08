@@ -74,6 +74,8 @@
         cursor: pointer; 
     }
 
+   
+
     /* 100% Image Width on Smaller Screens */
     @media only screen and (max-width: 700px){
         .move-btnAlbumCreative {
@@ -92,6 +94,20 @@
         .move-btnAlbumCreative.right { 
             position: absolute;
             top: 10% !important;
+            right: 0;
+            cursor: pointer; 
+        }
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 400px){
+        .move-btnAlbumCreative.left  { 
+            top: 0 !important;
+            left: 0;
+            cursor: pointer;
+        }
+        .move-btnAlbumCreative.right { 
+            top: 0 !important;
             right: 0;
             cursor: pointer; 
         }
