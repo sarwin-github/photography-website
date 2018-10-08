@@ -342,7 +342,7 @@
 </section>
 
 <!-- Gallery Modal -->
-<div class="modal fade modal-small" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+<div class="modal fade modal-small" style="background: rgba(0,0,0,0.9);" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -412,7 +412,20 @@
 
 <script type="text/javascript">
     var featured = document.querySelector('.featured-item');
+    var gallery = document.querySelector('.gallery');
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    var numOfItems = gallery.children.length;
+    var itemWidth = 23; // percent: as set in css
+
+    var leftBtn = document.querySelector('.move-btn.left');
+    var rightBtn = document.querySelector('.move-btn.right');
+    var leftInterval;
+    var rightInterval;
+
+    var scrollRate = 0.2;
+    var left;
     var initImage;
+
     $(document).ready(function(){
        $('#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #myImg13').mouseover(function() {
            var modal = document.getElementById('myModal');
@@ -436,7 +449,7 @@
                ];
 
                var selectedImg = images.indexOf(initImage);
-               console.log(initImage);
+               console.log(selectedImg);
                //Set Initial Featured Image
                featured.style.backgroundImage = 'url(' + initImage + ')';
                
@@ -445,22 +458,18 @@
                    galleryItems[i].style.backgroundImage = 'url(' + images[i] + ')';
                    galleryItems[i].addEventListener('click', selectItem);
                }
+
+               for (var i = 0; i < galleryItems.length; i++) {
+                   if (galleryItems[i].classList.contains('active'))
+                       galleryItems[i].classList.remove('active');
+               }
+
+               galleryItems[selectedImg].classList.add('active');
            }
        });
    });
 
-    var gallery = document.querySelector('.gallery');
-    var galleryItems = document.querySelectorAll('.gallery-item');
-    var numOfItems = gallery.children.length;
-    var itemWidth = 23; // percent: as set in css
-
-    var leftBtn = document.querySelector('.move-btn.left');
-    var rightBtn = document.querySelector('.move-btn.right');
-    var leftInterval;
-    var rightInterval;
-
-    var scrollRate = 0.2;
-    var left;
+    
 
     function selectItem(e) {
         if (e.target.classList.contains('active')) return;
