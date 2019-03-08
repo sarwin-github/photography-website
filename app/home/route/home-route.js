@@ -10,5 +10,5 @@ router.use(csrfProtection);
 /* Get The home page with list of fitness option */
 router.route('/').get(homeController.getHome);
 router.route('/').post(homeController.sendContactForm);
-
+router.route('/blog').get(homeController.getBlog);
 module.exports = router;

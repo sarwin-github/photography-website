@@ -52,3 +52,13 @@ module.exports.sendContactForm = (req, res) => {
 	    res.redirect('/');
 	});	
 };
+
+
+module.exports.getBlog = (req, res) => {
+	res.render('blog/blog.ejs', { 
+		success: true, 
+		error: req.flash('error'),
+		message: req.flash('message'),
+		csrfToken: req.csrfToken()
+	});
+}
