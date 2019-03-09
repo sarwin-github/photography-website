@@ -96,14 +96,27 @@ body.enable-scroll {
 }
 
 .btn-hover-all:hover{
-	border: 1px solid whitesmoke !important; 
-	color: whitesmoke !important;
+	border: 1px solid gray !important; 
+	color: gray !important;
 }
 
 .btn-hover-all:active{
-	border: 1px solid whitesmoke !important; 
-	color: whitesmoke !important;
+	border: 1px solid gray !important; 
+	color: gray !important;
 }
+
+.btn-hover-all-about:hover{
+    border: 1px whitesmoke #ffbb33 !important; 
+    color: whitesmoke !important;
+}
+
+
+.btn-hover-all-about:active{
+    border: 1px solid whitesmoke !important; 
+    color: whitesmoke !important;
+}
+
+
 
 .hvr-bounce-to-bottom:before{
 	background: #ffbb33 !important;
