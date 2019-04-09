@@ -11,4 +11,6 @@ router.use(csrfProtection);
 router.route('/').get(homeController.getHome);
 router.route('/').post(homeController.sendContactForm);
 router.route('/blog').get(homeController.getBlog);
+router.route('/blog/street-photography').get(homeController.getBlogStreet);
+router.route('/blog/note-to-the-masses').get(homeController.getNoteMasses);
 module.exports = router;

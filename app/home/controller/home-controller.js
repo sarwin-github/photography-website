@@ -62,3 +62,21 @@ module.exports.getBlog = (req, res) => {
 		csrfToken: req.csrfToken()
 	});
 }
+
+module.exports.getBlogStreet = (req, res) => {
+	res.render('blog/blog-street-photography.ejs', { 
+		success: true, 
+		error: req.flash('error'),
+		message: req.flash('message'),
+		csrfToken: req.csrfToken()
+	});
+}
+
+module.exports.getNoteMasses = (req, res) => {
+	res.render('blog/blog-note-to-the-masses.ejs', { 
+		success: true, 
+		error: req.flash('error'),
+		message: req.flash('message'),
+		csrfToken: req.csrfToken()
+	});
+}
